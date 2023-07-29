@@ -1,0 +1,272 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url('../loader.gif') no-repeat center;
+    z-index: 10000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root {
+    --black: #000;
+    --white: #fff;
+}
+
+/* Navigation bar */
+#navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 100000;
+}
+
+#navbar::before {
+    content: '';
+    position: absolute;
+    background: var(--black);
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+    margin: 13px 28px;
+}
+
+#logo img {
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar ul li {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#navbar ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    color: var(--white);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#navbar ul li a:hover {
+    background: #f2f2f2;
+    color: #000;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 200px;
+    height: 636px;
+    text-align: center;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/bg.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 730px;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1 {
+    color: var(--white);
+    text-align: center;
+}
+
+#home p {
+    color: var(--white);
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Services Section */
+#services {
+    /* margin: 34px; */
+    margin: 10px;
+    display: flex;
+}
+
+#services .card {
+    border: 2px solid red;
+    margin: 4px 8px;
+    border-radius: 23px;
+    /* padding: 20px; */
+    padding: 5px;
+    background: #f2f2f2;
+}
+
+#services .card img {
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+/* Clients Section */
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#client-section {
+    position: relative;
+}
+
+#client-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/bg-1.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.client-item {
+    padding: 34px;
+}
+
+#clients img {
+    height: 100px;
+    transition: transform 0.3s;
+}
+
+/* #clients img:hover {
+ transform: scale(1.1) rotate(360deg);
+} */
+
+/* Contact Section */
+#contact {
+    position: relative;
+}
+
+#contact:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(../img/contact.jpg) no-repeat center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box form {
+    width: 40%;
+
+}
+
+#contact-box label {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 9px;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+}
+
+#contact-box textarea {
+    margin-bottom: -25px;
+}
+
+#contact-box form .btn {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 8px 33px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+/* Utility Classes */
+.h-primary {
+    font-size: 2.8em;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.h-secondary {
+    font-size: 1.8em;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid var(--white);
+    background: #a52a2a;
+    color: var(--white);
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn:hover {
+    letter-spacing: 1px;
+    transform: scale(1.2);
+    background: #7d1f1f;
+}
